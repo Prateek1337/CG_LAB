@@ -18,7 +18,7 @@ void display(void){
 	Xin = dx/step;
 	Yin = dy/step;
 	 
-	x= x1;
+	x=x1;
 	y=y1;
 	glColor3f(1.0f, 1.0f, 1.0f);
 	glBegin(GL_POINTS);
@@ -40,7 +40,7 @@ void init(void)
 	glClearColor(0,0,0,0);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluOrtho2D(-100,100,-100,100);
+	gluOrtho2D(-1000,1000,-1000,1000);
 }
  
 int main(int argc, char** argv) {
