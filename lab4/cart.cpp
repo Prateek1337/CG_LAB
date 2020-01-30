@@ -144,7 +144,6 @@ void display(){
     if(dis<-50){
       dir=1;
     }
-    if(dir==1){
       glPushMatrix();
       glTranslatef(dis,0,0);
       wheel(-300,-200,5,50);
@@ -165,32 +164,14 @@ void display(){
 
       draw_line(-300,-100,0,0);
       glPopMatrix();
-      angle -= 0.1f;
-      dis=dis+0.1;
+    if(dir==1){
+      angle -= 0.3f;
+      dis=dis+0.3;
     }
     if(dir==-1){
-      glPushMatrix();
-      glTranslatef(dis,0,0);
-      wheel(-300,-200,5,50);
-      wheel(-100,-200,5,50);
 
-      draw_line(-240,-160,-200,-200);
-
-      draw_line(-360,-400,-200,-200);
-      draw_line(-40,0,-200,-200);
-
-      draw_line(0,0,-100,-200);
-      draw_line(0,-100,-100,-100);
-      draw_line(-100,-100,-100,0);
-
-      draw_line(-400,-400,-100,-200);
-      draw_line(-400,-300,-100,-100);
-      draw_line(-300,-300,-100,0);
-
-      draw_line(-300,-100,0,0);
-      glPopMatrix();
-      angle += 0.1f;
-      dis=dis-0.1;
+      angle += 0.3f;
+      dis=dis-0.3;
     }
     draw_line(-500,500,-250,-250);
 
