@@ -166,10 +166,10 @@ void draw_mid(int length,int breadth){
   draw_line(topx,topx, topy+length,topy);
 
 }
-
 void face(int x,int y,int length,int breadth){
   Semi_circle(x,y,breadth/2);
   draw_line(-breadth/2,breadth/2,y,y);
+  r1=breadth/root2,r2=breadth/root2;
   Circle(-breadth/4,length/4,(breadth+length)/24);
   Circle(breadth/4,length/4,(breadth+length)/24);
 
@@ -195,9 +195,15 @@ void andriod(int x,int y,int length,int breadth){
   draw_mid(length,breadth);
   glTranslatef(-x,-y,0);
   hands(x,y,length,breadth);
-  glTranslatef(x,y+breadth/2+15,0);
+  glTranslatef(x,y+length/2+15,0);
   face(x,y,length,breadth);
-  glTranslatef(x,-y-breadth/2-15,0);
+  glTranslatef(x,-y-length/2-15,0);
+  glTranslatef(x-breadth/4,-y-length/2-30,0);
+  draw_mid(length/2,breadth/4);
+  glTranslatef(x+breadth/4,y+length/2+30,0);
+  glTranslatef(x+breadth/4,-y-length/2-30,0);
+  draw_mid(length/2,breadth/4);
+  glTranslatef(x-breadth/4,y+length/2+30,0);
 }
 int length=100,breadth=100;
 int sinc=20;
@@ -205,7 +211,7 @@ int currx=0;
 int clear=0;
 void display(){
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1 ,0, 0);
+    glColor3f(0 ,0.5, 0);
     if(clear==0){
       glTranslatef(currx,0,0);
       andriod(0,0,length,breadth);
