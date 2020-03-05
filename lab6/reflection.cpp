@@ -117,11 +117,15 @@ void myDisplay() {
 		glutPostRedisplay();
 	if(t==1){
 		drawTriangle(0,100,50,-100,-100,-50);
+				glClear(GL_COLOR_BUFFER_BIT);
+
 		glutPostRedisplay();
 
 	}
 	else if(t==2){
 		drawTriangle(-0,-100,-50,100,100,50);
+				glClear(GL_COLOR_BUFFER_BIT);
+
 		glutPostRedisplay();
 
 	}

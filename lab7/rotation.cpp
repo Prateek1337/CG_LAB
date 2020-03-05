@@ -112,11 +112,6 @@ void Special_Keys (int key, int x, int y)
        
 
     switch (key) {
-
-
-  
-       
-
        case GLUT_KEY_LEFT :  viewangle -= 5; RotateX(Alpha); break;
        case GLUT_KEY_RIGHT:  viewangle += 5;  RotateY(Alpha);break;
        case GLUT_KEY_UP   :  tippangle -= 5;  RotateZ(Alpha);break;
@@ -229,14 +224,14 @@ void redraw (void)
     glDisable (GL_LIGHTING);
 
 
-    glPushMatrix ();
-       glTranslatef (d[0], d[1], d[2]); 
-       glScalef (sx, sy, sz);
-       glRotatef (zAngle, 0,0,1);
-       glRotatef (yAngle, 0,1,0);
-       glRotatef (xAngle, 1,0,0);
-       CUBE ();
-    glPopMatrix ();
+    // glPushMatrix ();
+    //    glTranslatef (d[0], d[1], d[2]); 
+    //    glScalef (sx, sy, sz);
+    //    glRotatef (zAngle, 0,0,1);
+    //    glRotatef (yAngle, 0,1,0);
+    //    glRotatef (xAngle, 1,0,0);
+    //    CUBE ();
+    // glPopMatrix ();
 
     glPushMatrix ();
        glTranslatef (d[0], d[1], d[2]); 

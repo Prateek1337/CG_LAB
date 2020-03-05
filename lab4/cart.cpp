@@ -94,7 +94,7 @@ void draw_line(int x1, int x2, int y1, int y2) {
   }
 }
 
-
+float root2=sqrt(2);
 void Circle(int xCenter,int yCenter,int r){
  
   int x=0,y=r;
@@ -131,6 +131,11 @@ void wheel(int xCenter,int yCenter,int r1,int r2){
     draw_line(0,0,-r1,-r2);
     draw_line(r1,r2,0,0);
     draw_line(-r1,-r2,0,0);
+    r1=r1/root2,r2=r2/root2;
+       draw_line(r1,r2,r1,r2);
+      draw_line(-r1,-r2,r1,r2);
+      draw_line(r1,r2,-r1,-r2);
+      draw_line(-r1,-r2,-r1,-r2);
     glEnd();
     glPopMatrix();
 

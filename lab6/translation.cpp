@@ -116,6 +116,8 @@ void myDisplay() {
 		draw_line(0+f1,100+f1,0+f2,100+f2);
 		printf("Enter factor\n");
 		scanf("%d%d",&f1,&f2);
+		glClear(GL_COLOR_BUFFER_BIT);
+
 		glutPostRedisplay();
 
 	}
@@ -131,6 +133,8 @@ void myDisplay() {
 		drawTriangle(-100+f1,100+f1,0+f1,100+f2,100+f2,0+f2);
 		printf("Enter factor\n");
 		scanf("%d%d",&f1,&f2);
+		glClear(GL_COLOR_BUFFER_BIT);
+
 		glutPostRedisplay();
 	}
 }

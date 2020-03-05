@@ -53,10 +53,10 @@ void display() {
  
       // Back face (z = -1.0f)
       // // Left face (x = -1.0f)
-      glVertex3f( length,  length, -1.0f);
-      glVertex3f(-length,  length, -1.0f);
-      glVertex3f(-length, -length, -1.0f);
-      glVertex3f( length, -length, -1.0f);
+      glVertex3f( length,  length, 0.0f);
+      glVertex3f(-length,  length, 0.0f);
+      glVertex3f(-length, -length, 0.0f);
+      glVertex3f( length, -length, 0.0f);
  
       // // Right face (x = 1.0f)
       // glVertex3f(1.0f,  1.0f, -1.0f);
